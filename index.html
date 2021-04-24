@@ -9,7 +9,6 @@
         rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/media.css"  media="screen and (max-width:768px)"/> -->
     <link rel="stylesheet" href="CSS/estilos1.css">
-
     <!-- <style>
         @media screen and (max-width: 768px) {
             body {
@@ -27,6 +26,7 @@
 </head>
 
 <body>
+
     <i class="icon-menu burger-button" id="burger-menu"></i>
 
 
@@ -279,41 +279,9 @@
         </div>
     </footer>
 
-    <script>
-
-        //  console.log(document.querySelector('.menu'));
-        //  document.querySelector('.menu').classList.add('is-active');
-    
-        // console.log(window.matchMedia('screen and (max-width:767px)'));
-        const ipad =  window.matchMedia('screen and (max-width:767px)');
-        const menu =  document.querySelector('.menu');
-        // console.log(menu);
-        const burgerButton = document.querySelector('#burger-menu');
-        // console.log(burgerButton);
-        ipad.addListener(validation);
-    
-    
-            function validation(event) {
-                if (event.matches) {
-                    burgerButton.addEventListener('click', showHide);
-                }
-                else{
-                    burgerButton.removeEventListener('click', showHide);
-                }
-             }
-    
-             validation(ipad);
-    
-            function showHide() {
-                if (menu.classList.contains('is-active')) {
-                    menu.classList.remove('is-active');
-                }
-                else {
-                    menu.classList.add('is-active');
-                }
-            }
-        </script> 
+    <script src="js/menu.js"></script>
 
 </body>
+
 
 </html>
